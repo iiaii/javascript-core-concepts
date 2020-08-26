@@ -1,6 +1,6 @@
 # this
 
-##### 전역공간에서의 this
+### 전역공간에서의 this
 
 - 브라우저  : window
 - node.js : global
@@ -9,7 +9,7 @@
  
  
  
-##### 함수내부에서의 this
+### 함수내부에서의 this
 
 - 브라우저  : window
 - node.js : global
@@ -117,7 +117,7 @@ d(3);
 // Object {c: "eee"} 1 2 3
 ```
  
-##### callback에서의 this
+### callback에서의 this
 
 ```javascript
 var callback = function() {
