@@ -145,7 +145,7 @@ setTimeout(callback.bind(obj), 100);
 // Object {a: 1}
 ```
 
-> 기본적으로는 함수의 this와 같지만 제어권을 가진 함수가 callback의 this를 명시한 경우에는 명시한 것을 따른다 (개발자가 this를 바인딩한 채로 callback을 넘기면 그에 따름)
+> 기본적으로는 함수의 this와 같지만 제어권을 가진 함수가 callback의 this를 명시한 경우에는 명시한 것을 따른다 (개발자가 this를 바인딩한 채로 callback을 넘기면 그에 따름)
  
  
 ### 생성자 함수에서의 this
