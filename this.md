@@ -117,7 +117,7 @@ d(3);
 // Object {c: "eee"} 1 2 3
 ```
  
-### callback에서의 this
+##### callback, this
 
 ```javascript
 var callback = function() {
