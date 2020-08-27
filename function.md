@@ -87,9 +87,29 @@ const c = function() {
 
 ##### 실행컨텍스트
 
+```
+'전역 컨텍스트': {
+  변수객체: {
+    arguments: null,
+    variable: ['name', 'wow', 'say'],
+  },
+  scopeChain: ['전역 변수객체'],
+  this: window,
+}
+
+'wow 컨텍스트': {
+  변수객체: {
+    arguments: [{ word : 'hello' }],
+    variable: null,
+  },
+  scopeChain: ['wow 변수객체', '전역 변수객체'],
+  this: window,
+}
+```
+
 - 실행되는 코드덩어리 (추상적 개념)
 - 실행될때 생성된다
-- 호이스팅, this 바인딩 등의 정보가 담긴다
+- 호이스팅, this 바인딩 등의 정보가 담긴다 (변수객체(arguments, variable), scope chain, this …)
 
 ```javascript
 var a = 1;
@@ -226,6 +246,7 @@ arr.forEach(obj.logValues);	// 콜백 호출 : else문 실행
  
  
 ---
-인프런 Javascript 핵심 개념 알아보기 (JS Flow)
+- 인프런 Javascript 핵심 개념 알아보기 (JS Flow)
+- [실행 컨텍스트](https://www.zerocho.com/category/Javascript/post/5741d96d094da4986bc950a0)
 
 
