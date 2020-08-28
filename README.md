@@ -5,6 +5,7 @@
 - [함수](https://github.com/iiaii/javascript-core-concepts/blob/master/function.md)
 - [this](https://github.com/iiaii/javascript-core-concepts/blob/master/this.md)
 - [클로저](https://github.com/iiaii/javascript-core-concepts/blob/master/this.md)
+- [프로토타입](https://github.com/iiaii/javascript-core-concepts/blob/master/prototype.md)
 
 
 
