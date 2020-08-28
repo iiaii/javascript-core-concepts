@@ -4,7 +4,7 @@
 - [데이터 타입](https://github.com/iiaii/javascript-core-concepts/blob/master/data-type.md)
 - [함수](https://github.com/iiaii/javascript-core-concepts/blob/master/function.md)
 - [this](https://github.com/iiaii/javascript-core-concepts/blob/master/this.md)
-
+- [클로저](https://github.com/iiaii/javascript-core-concepts/blob/master/this.md)
 
 
 
