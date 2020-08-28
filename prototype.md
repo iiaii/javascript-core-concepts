@@ -1,4 +1,4 @@
-# #자바스크립트/Prototype
+# Prototype
 ### prototype, constructor, __proto__
 
 ![prototype1](https://github.com/iiaii/javascript-core-concepts/blob/master/images/prototype1.png?raw=true)
