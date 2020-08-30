@@ -15,6 +15,43 @@
 - node.js : global
 
 > 전역 객체를 나타낸다 (바뀔 수 있음)
+
+
+```javascript
+// es5, function은 window 객체가 this 바인딩 된다
+function a() {
+	console.log(this);	// window 객체
+	function b() {
+		console.log(this);	// window 객체
+	}
+	b();
+}
+a();	
+```
+
+```javascript
+// es6, arrow function은 this 바인딩을 하지 않기 때문에 this는 항상 전역 객체
+(() => {
+	console.log(this);		// window
+	(() => {
+		console.log(this);	// window
+	})();
+})();
+```
+
+```javascript
+// 호출된 형식이 함수이면 this 바인딩, 메서드면 메서드 객체 (.의 앞의 객체)
+var d = {
+	e: function() {
+		console.log(this);		// d 객체
+		function f() {
+			console.log(this);	// this
+		}
+		f();
+	}
+}
+d.e();
+```
  
  
  
