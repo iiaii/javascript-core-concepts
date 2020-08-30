@@ -3,7 +3,9 @@
 ### 호이스팅
 
 변수 선언과 함수 선언을 코드의 최상단으로 끌어올린다. (할당은 제외)
-호이스팅은 실재하는 현상은 아니고 LexicalEnvironment의 environmentRecord(현재 문맥의 식별자 정보)가 하는 정보 수집 과정을 쉽게 이해하기 위해 만들어낸 허구의 개념이다.
+호이스팅은 실재하는 현상은 아니고 lexicalEnvironment의 environmentRecord(현재 문맥의 식별자 정보)가 하는 정보 수집 과정을 쉽게 이해하기 위해 만들어낸 허구의 개념이다.
+
+
 
 ```javascript
 // 호이스팅 전
@@ -42,6 +44,20 @@ b = function bb() {
 
 c = function() {
 	return 'c';
+}
+```
+
+- environmentRecord 
+
+현재 전역 컨텍스트의 lexicalEnvironment의 environmentRecord가 선언되어 있는 식별자를 수집하는 것으로 실재하는 현상이다. 
+environmentRecord가 수집하는 것은 실재하는 현상이며 이를 호이스팅이라고 부르고 이해하는 것이다. 
+
+```
+// environmentRecord가 수집한 식별자들
+{
+   function a() { ... },
+   b,
+   c
 }
 ```
  
@@ -88,10 +104,24 @@ const c = function() {
 
 ##### 실행컨텍스트
 
-실행컨텍스트에서 생성되는 값
+실행컨텍스트는 함수를 실행할 때 필요한 환경정보를 담은 객체이다. 실행컨텍스트에는 3가지가 존재한다.
 
-- VariableEnvironment (초기 정보의 스냅샵, 변경 안됨)
-- LexicalEnvironment (environmentRecord = 현재 문맥의 식별자 정보 = 호이스팅, 변경 됨)
+- VariableEnvironment 
+
+초기 정보의 스냅샷으로 lexicalEnvironment와 같은 것의 스냅샷을 가진다.
+
+- LexicalEnvironment 
+
+> environmentRecord = 현재 문맥의 식별자 정보 = 호이스팅
+
+environmentRecord는 선언된 식별자(변수, 함수)를 수집한다. 호이스팅은 environmentRecord의 수집을 끌어올린다는 용어로 이해를 돕기위한 개념이지 실제로는 일어나지는 않는다.
+
+
+> outerEnvironmentReference = 외부 문맥의 식별자 정보 = 스코프. 
+
+외부에서 내부를 그냥 참조할 수 없고, 내부 컨텍스트에서는 식별자가 없으면 외부컨텍스트는 자동으로 찾는다. (이것이 스코프 체인)
+최종 외부 컨텍스트는 전역 컨텍스트이다.
+
 - ThisBinding 
 
 
