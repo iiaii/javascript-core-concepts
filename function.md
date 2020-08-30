@@ -3,6 +3,7 @@
 ### 호이스팅
 
 변수 선언과 함수 선언을 코드의 최상단으로 끌어올린다. (할당은 제외)
+호이스팅은 실재하는 현상은 아니고 LexicalEnvironment의 environmentRecord(현재 문맥의 식별자 정보)가 하는 정보 수집 과정을 쉽게 이해하기 위해 만들어낸 허구의 개념이다.
 
 ```javascript
 // 호이스팅 전
@@ -87,6 +88,13 @@ const c = function() {
 
 ##### 실행컨텍스트
 
+실행컨텍스트에서 생성되는 값
+
+- VariableEnvironment (초기 정보의 스냅샵, 변경 안됨)
+- LexicalEnvironment (environmentRecord = 현재 문맥의 식별자 정보 = 호이스팅, 변경 됨)
+- ThisBinding 
+
+
 ```
 '전역 컨텍스트': {
   변수객체: {
@@ -106,6 +114,8 @@ const c = function() {
   this: window,
 }
 ```
+
+실행 컨텍스트의 특징은 
 
 - 실행되는 코드덩어리 (추상적 개념)
 - 실행될때 생성된다
