@@ -102,7 +102,7 @@ Employee.prototype.getPosition = function() {
 단순히 프로토타입을 연결하면 프로토타입 값 내에서 중복이 발생하게 된다. 따라서 클래스 상속을 구현할 때 실제로 클로저를 활용한 Bridge 생성자를 사용할 것을 권한다.
 
 ```javascript
-// es6
+// es5
 // 이 함수를 활용하면 자식 부모 관계를 만들어준다 
 var extendClass = (function() {
 	function Bridge(){}
